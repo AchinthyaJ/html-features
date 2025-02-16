@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Features Demo</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .menu {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .menu a:hover {
+            color: #ff7675;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 20px;
+        }
+        video, audio, img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            background: #ff7675;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background: #d63031;
+        }
+        ol, ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        ol li, ul li {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        pre {
+            background: #222;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+            overflow-x: auto;
+        }
+        .styled-box {
+            width: 200px;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border: 3px solid black;
+            text-align: center;
+            font-weight: bold;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #ff7675;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        form {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #ff7675;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #d63031;
+        }
+        .marquee-container {
+            background: #333;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        marquee {
+            color: white;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="#tables">Tables</a>
+        <a href="#forms">Forms</a>
+        <a href="#marquee">Marquee</a>
+        <a href="#video">Video</a>
+        <a href="#audio">Audio</a>
+        <a href="#image">Image</a>
+        <a href="#link">Hyperlink</a>
+        <a href="#lists">Lists</a>
+        <a href="#css">CSS Features</a>
+    </div>
+    <div class="container">
+        <h1>HTML & CSS Features Showcase</h1>
+
+        <h2 id="tables">📊 Table Element</h2>
+        <table>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+            </tr>
+        </table>
+        <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+        &lt;th&gt;Header 3&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+        &lt;td&gt;Row 1, Cell 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+        &lt;td&gt;Row 2, Cell 3&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+        <h2 id="forms">📝 Form Elements</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">Select a country</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="canada">India</option>
+            </select>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            
+            <input type="submit" value="Submit">
+        </form>
+        <pre>
+&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;label for="country"&gt;Country:&lt;/label&gt;
+    &lt;select id="country" name="country"&gt;
+        &lt;option value=""&gt;Select a country&lt;/option&gt;
+        &lt;option value="usa"&gt;USA&lt;/option&gt;
+        &lt;option value="uk"&gt;UK&lt;/option&gt;
+        &lt;option value="canada"&gt;India&lt;/option&gt;
+    &lt;/select&gt;
+    
+    &lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea id="message" name="message" rows="4"&gt;&lt;/textarea&gt;
+    
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</pre>
+
+        <h2 id="marquee">✨ Marquee Element</h2>
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="left">
+                This is a scrolling text using the marquee element!
+            </marquee>
+        </div>
+        <pre>
+&lt;marquee behavior="scroll" direction="left"&gt;
+    This is a scrolling text using the marquee element!
+&lt;/marquee&gt;</pre>
+
+        <!-- Rest of the existing content remains the same -->
+        
+        <h2 id="video">🎥 Video Element</h2>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <pre>
+&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;</pre>
+        
+        <h2 id="audio">🎵 Audio Element</h2>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <pre>
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;</pre>
+        
+        <h2 id="image">🖼️ Image Element</h2>
+        <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Sample Image">
+        <pre>
+&lt;img src="image.jpg" alt="Sample Image"&gt;</pre>
+        
+        <h2 id="link">🔗 Hyperlink</h2>
+        <a href="https://www.example.com" target="_blank">Visit Example Website</a>
+        <pre>
+&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example Website&lt;/a&gt;</pre>
+        
+        <h2 id="lists">📌 Ordered List</h2>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <pre>
+&lt;ol&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;</pre>
+        
+        <h2>📌 Unordered List</h2>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Cherry</li>
+        </ul>
+        <pre>
+&lt;ul&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Banana&lt;/li&gt;
+    &lt;li&gt;Cherry&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        
+        <h2 id="css">🎨 Styled Box</h2>
+        <div class="styled-box">Styled Box</div>
+        <pre>
+/* CSS Code */
+.styled-box {
+    width: 200px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border: 3px solid black;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+        </pre>
+    </div>
+</body>
+</html>
